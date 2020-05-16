@@ -1,0 +1,11 @@
+env:
+  TERM: xterm-256color
+
+font:
+  normal:
+    family: Cozette
+  bold:
+    family: Cozette
+  italic:
+    family: Cozette
+  size: 9.0
