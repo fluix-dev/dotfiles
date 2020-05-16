@@ -1,0 +1,251 @@
+### Variables
+# Alt
+set $mod Mod1
+set $left h
+set $down j
+set $up k
+set $right l
+set $term alacritty
+set $menu rofi
+
+### Output configuration
+output DP-2 {
+  bg ~/.config/sway/wallpapers/mrrobot.jpg fill
+  resolution 1920x1080 position 1080,420
+}
+output HDMI-A-3 {
+  bg ~/.config/sway/wallpapers/blank_90.jpg fill
+  resolution 1920x1080 position 0,0 transform 90
+}
+
+### Input configuration
+input "type:pointer" {
+  accel_profile flat
+  pointer_accel -0.1
+  scroll_factor 2
+}
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+Shift+q kill
+
+    # Start your launcher
+    bindsym $mod+d exec echo "$menu -show run" | xargs swaymsg exec --
+    bindsym $mod+Shift+d exec $menu -show ssh | xargs swaymsg exec --
+    # bindsym $mod+d exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Shift+r reload
+
+    # Exit sway (logs you out of your Wayland session)
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit Sway?' -b 'Yes' 'swaymsg exit'
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+    # Workspace definitions
+    workspace 1a output DP-2
+    workspace 2a output DP-2
+    workspace 3a output DP-2
+    workspace 4a output DP-2
+    workspace 5a output DP-2
+    workspace 6a output DP-2
+    workspace 7a output DP-2
+    workspace 8a output DP-2
+    workspace 9a output DP-2
+    workspace 0a output DP-2
+
+    workspace 1b output HDMI-A-3
+    workspace 2b output HDMI-A-3
+    workspace 3b output HDMI-A-3
+    workspace 4b output HDMI-A-3
+    workspace 5b output HDMI-A-3
+    workspace 6b output HDMI-A-3
+    workspace 7b output HDMI-A-3
+    workspace 8b output HDMI-A-3
+    workspace 9b output HDMI-A-3
+    workspace 0b output HDMI-A-3
+
+    # Changing workspaces
+    bindsym $mod+1 workspace 1a
+    bindsym $mod+2 workspace 2a
+    bindsym $mod+3 workspace 3a
+    bindsym $mod+4 workspace 4a
+    bindsym $mod+5 workspace 5a
+    bindsym $mod+6 workspace 6a
+    bindsym $mod+7 workspace 7a
+    bindsym $mod+8 workspace 8a
+    bindsym $mod+9 workspace 9a
+    bindsym $mod+0 workspace 0a
+
+    bindsym $mod+Ctrl+1 workspace 1b
+    bindsym $mod+Ctrl+2 workspace 2b
+    bindsym $mod+Ctrl+3 workspace 3b
+    bindsym $mod+Ctrl+4 workspace 4b
+    bindsym $mod+Ctrl+5 workspace 5b
+    bindsym $mod+Ctrl+6 workspace 6b
+    bindsym $mod+Ctrl+7 workspace 7b
+    bindsym $mod+Ctrl+8 workspace 8b
+    bindsym $mod+Ctrl+9 workspace 9b
+    bindsym $mod+Ctrl+0 workspace 0b
+
+    # Moving containers to workspaces
+    bindsym $mod+Shift+1 move container to workspace 1a
+    bindsym $mod+Shift+2 move container to workspace 2a
+    bindsym $mod+Shift+3 move container to workspace 3a
+    bindsym $mod+Shift+4 move container to workspace 4a
+    bindsym $mod+Shift+5 move container to workspace 5a
+    bindsym $mod+Shift+6 move container to workspace 6a
+    bindsym $mod+Shift+7 move container to workspace 7a
+    bindsym $mod+Shift+8 move container to workspace 8a
+    bindsym $mod+Shift+9 move container to workspace 9a
+    bindsym $mod+Shift+0 move container to workspace 0a
+
+    bindsym $mod+Shift+Ctrl+1 move container to workspace 1b
+    bindsym $mod+Shift+Ctrl+2 move container to workspace 2b
+    bindsym $mod+Shift+Ctrl+3 move container to workspace 3b
+    bindsym $mod+Shift+Ctrl+4 move container to workspace 4b
+    bindsym $mod+Shift+Ctrl+5 move container to workspace 5b
+    bindsym $mod+Shift+Ctrl+6 move container to workspace 6b
+    bindsym $mod+Shift+Ctrl+7 move container to workspace 7b
+    bindsym $mod+Shift+Ctrl+8 move container to workspace 8b
+    bindsym $mod+Shift+Ctrl+9 move container to workspace 9b
+    bindsym $mod+Shift+Ctrl+0 move container to workspace 0b
+#
+# Layout stuff:
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+#
+# Screen capture
+#
+bindsym --release Print exec \
+    mkdir -p ~/Screenshots && \
+    grim -g "$(slurp)" - | wl-copy -t image/png && \
+    wl-paste > ~/Screenshots/screenshot_$(date +'%Y%m%d_%H%M%S.png')
+# Screenshot of focused window (excluding borders). Requires jq json parser.
+bindsym --release Shift+Print exec \
+    mkdir -p ~/Screenshots && \
+    SNIP_DIMENSIONS=$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"') && \
+    grim -g "$SNIP_DIMENSIONS" - | \
+    wl-copy -t image/png && \
+    wl-paste > ~/Screenshots/screenshot_$(date +'%Y%m%d_%H%M%S.png')
+
+#
+# Audio
+#
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master 3%+ && play -nq -t alsa synth 0.05 sin 440 gain -20"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master 3%- && play -nq -t alsa synth 0.05 sin 380 gain -20"
+
+### Graphical changes
+# 
+# General config
+#
+font Cozette 9
+gaps inner 15
+default_border pixel 2
+
+#
+# Colours
+#
+client.background n/a #f2227a n/a
+client.focused #f2227a #f2227a #191919 #f2227a #f2227a 
+client.focused_inactive #49caea #49caea #191919 #49caea #49caea
+client.unfocused #49caea #49caea #191919 #49caea #49caea
+client.urgent #f2227a #f2227a #191919 #f2227a #f2227a
+
+### Auto start
+exec waybar
+include /etc/sway/config.d/*
