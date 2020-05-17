@@ -1,0 +1,26 @@
+* {
+  font-family: Cozette;
+}
+
+.search {
+  border-radius: 0;
+  border: 2px solid #f2227a;
+  border-bottom: none;
+  background-color: #191919;
+  color: #49caec;
+}
+
+#entry {
+  color: #edf7f9;
+}
+
+#entry:selected {
+  background-color: #49caec;
+}
+
+.frame {
+  background-color: #191919;
+  border: 2px solid #f2227a;
+  border-top: none;
+}
+

@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu rofi
+set $menu wofi
 
 ### Output configuration
 output DP-2 {
@@ -36,9 +36,7 @@ input "type:pointer" {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec echo "$menu -show run" | xargs swaymsg exec --
-    bindsym $mod+Shift+d exec $menu -show ssh | xargs swaymsg exec --
-    # bindsym $mod+d exec $menu
+    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
