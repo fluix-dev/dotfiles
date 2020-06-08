@@ -80,7 +80,7 @@
     "network": {
         "interface": "enp8s0",
         "format": "{ifname}",
-        "format-ethernet": "{ifname} <span color=\"#f2227a\"></span> {ipaddr} <span color=\"#506568\"> | </span> <span color=\"#49caec\">▲</span> {bandwidthDownBits} <span color=\"#49caec\">▼</span> {bandwidthUpBits}",
+        "format-ethernet": "{ifname} <span color=\"#f2227a\"></span> {ipaddr} <span color=\"#506568\"> | </span> <span color=\"#49caec\">▼</span> {bandwidthDownBits} <span color=\"#49caec\">▲</span> {bandwidthUpBits}",
         "format-disconnected": "<span color=\"#f2227a\">Disconnected</span>",
         "tooltip": false,
         "max-length": 50
