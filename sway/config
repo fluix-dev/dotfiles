@@ -49,7 +49,9 @@ input "type:pointer" {
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit Sway?' -b 'Yes' 'swaymsg exit'
+    bindsym $mod+Shift+e exec \
+      swaynag -t warning -m 'Exit Sway?' -b 'Yes' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -74,6 +76,7 @@ input "type:pointer" {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
@@ -145,6 +148,7 @@ input "type:pointer" {
     bindsym $mod+Shift+Ctrl+8 move container to workspace 8b
     bindsym $mod+Shift+Ctrl+9 move container to workspace 9b
     bindsym $mod+Shift+Ctrl+0 move container to workspace 0b
+
 #
 # Layout stuff:
 #
@@ -170,6 +174,7 @@ input "type:pointer" {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
 #
 # Scratchpad:
 #
@@ -182,6 +187,7 @@ input "type:pointer" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
 #
 # Resizing containers:
 #
@@ -206,9 +212,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
 #
 # Screen capture
 #
+# Screenshot an area
 bindsym --release Print exec \
     mkdir -p ~/Screenshots && \
     grim -g "$(slurp)" - | wl-copy -t image/png && \
@@ -246,4 +254,5 @@ client.urgent #f2227a #f2227a #191919 #f2227a #f2227a
 
 ### Auto start
 exec waybar
+exec mako
 include /etc/sway/config.d/*
