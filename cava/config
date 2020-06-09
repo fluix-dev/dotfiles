@@ -12,17 +12,14 @@ channels = stereo
 
 [color]
 gradient = 1
-gradient_count = 2
-gradient_color_1 = '#1f62b3'
-gradient_color_2 = '#a12269'
+gradient_count = 4
+gradient_color_1 = '#f2227a'
+gradient_color_2 = '#522141'
+gradient_color_3 = '#1f62b3'
+gradient_color_4 = '#49caea'
 
 [smoothing]
+integral = 90
 monstercat = 1
-waves = 1
-
-[eq]
-1=2
-2=2
-3=1
-4=1
-5=0.5
+waves = 0
+gravity = 150
