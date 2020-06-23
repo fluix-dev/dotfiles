@@ -1,0 +1,35 @@
+# Take a look at the mako manpage with the command:
+#   man 5 mako
+# To view all configuration options.
+
+font=Cozette 11
+format=<b>%a ⏵</b> %s\n%b
+sort=-time
+output=DP-2
+layer=overlay
+anchor=top-right
+background-color=#191919
+width=300
+height=110
+margin=15
+padding=0,5,20
+border-size=2
+border-color=#49caec
+border-radius=0
+icons=0
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+
+[urgency=normal]
+border-color=#1f62b3
+
+[urgency=high]
+border-color=#f2227a
+default-timeout=0
+
+[app-name=discord]
+border-color=#49caec
+
+[summary~="log-.*"]
+border-color=#ffffff
