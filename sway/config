@@ -7,13 +7,16 @@ set $up k
 set $right l
 set $term alacritty
 set $menu wofi
+# Monitors
+set $mon1 DP-2
+set $mon2 HDMI-A-3
 
 ### Output configuration
-output DP-2 {
+output $mon1 {
   bg ~/.config/sway/wallpapers/mrrobot.jpg fill
   resolution 1920x1080 position 1080,420
 }
-output HDMI-A-3 {
+output $mon2 {
   bg ~/.config/sway/wallpapers/blank_90.jpg fill
   resolution 1920x1080 position 0,0 transform 90
 }
@@ -82,27 +85,27 @@ input "type:pointer" {
 # Workspaces:
 #
     # Workspace definitions
-    workspace 1a output DP-2
-    workspace 2a output DP-2
-    workspace 3a output DP-2
-    workspace 4a output DP-2
-    workspace 5a output DP-2
-    workspace 6a output DP-2
-    workspace 7a output DP-2
-    workspace 8a output DP-2
-    workspace 9a output DP-2
-    workspace 0a output DP-2
+    workspace 1a output $mon1
+    workspace 2a output $mon1
+    workspace 3a output $mon1
+    workspace 4a output $mon1
+    workspace 5a output $mon1
+    workspace 6a output $mon1
+    workspace 7a output $mon1
+    workspace 8a output $mon1
+    workspace 9a output $mon1
+    workspace 0a output $mon1
 
-    workspace 1b output HDMI-A-3
-    workspace 2b output HDMI-A-3
-    workspace 3b output HDMI-A-3
-    workspace 4b output HDMI-A-3
-    workspace 5b output HDMI-A-3
-    workspace 6b output HDMI-A-3
-    workspace 7b output HDMI-A-3
-    workspace 8b output HDMI-A-3
-    workspace 9b output HDMI-A-3
-    workspace 0b output HDMI-A-3
+    workspace 1b output $mon2
+    workspace 2b output $mon2
+    workspace 3b output $mon2
+    workspace 4b output $mon2
+    workspace 5b output $mon2
+    workspace 6b output $mon2
+    workspace 7b output $mon2
+    workspace 8b output $mon2
+    workspace 9b output $mon2
+    workspace 0b output $mon2
 
     # Changing workspaces
     bindsym $mod+1 workspace 1a
