@@ -236,6 +236,12 @@ bindsym --release Shift+Print exec \
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ && play -nq -t pulseaudio synth 0.05 sin 440 gain -20"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- && play -nq -t pulseaudio synth 0.05 sin 380 gain -20"
 
+#
+# Changing colorscheme
+#
+bindsym Menu+1 exec "wal --theme mrrobot"
+bindsym Menu+2 exec "wal --theme andromeda"
+
 # 
 # Font, borders, and gaps
 #
