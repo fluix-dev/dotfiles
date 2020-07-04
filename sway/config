@@ -236,8 +236,8 @@ bindsym --release Shift+Print exec \
 #
 # Audio
 #
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ && play -nq -t pulseaudio synth 0.05 sin 440 gain -20"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- && play -nq -t pulseaudio synth 0.05 sin 380 gain -20"
+bindsym XF86AudioRaiseVolume exec "~/.config/scripts/audio.sh 3%+"
+bindsym XF86AudioLowerVolume exec "~/.config/scripts/audio.sh 3%-"
 
 #
 # Changing colorscheme
