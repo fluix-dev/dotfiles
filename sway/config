@@ -31,6 +31,7 @@ input "type:pointer" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $term --class=floating
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -256,3 +257,8 @@ client.urgent #f2227a #f2227a #191919 #f2227a #f2227a
 exec waybar
 exec mako
 include /etc/sway/config.d/*
+
+#
+# Auto floating for windows like Terminals started with Mod+Shift+Return
+#
+for_window [app_id="floating"] floating enable
