@@ -233,12 +233,11 @@ bindsym --release Shift+Print exec \
 #
 # Audio
 #
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master 3%+ && play -nq -t alsa synth 0.05 sin 440 gain -20"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master 3%- && play -nq -t alsa synth 0.05 sin 380 gain -20"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+ && play -nq -t pulseaudio synth 0.05 sin 440 gain -20"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- && play -nq -t pulseaudio synth 0.05 sin 380 gain -20"
 
-### Graphical changes
 # 
-# General config
+# Font, borders, and gaps
 #
 font Cozette 9
 gaps inner 15
@@ -253,7 +252,9 @@ client.focused_inactive #49caea #49caea #191919 #49caea #49caea
 client.unfocused #49caea #49caea #191919 #49caea #49caea
 client.urgent #f2227a #f2227a #191919 #f2227a #f2227a
 
-### Auto start
+#
+# Auto start
+#
 exec waybar
 exec mako
 include /etc/sway/config.d/*
