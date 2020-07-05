@@ -220,18 +220,8 @@ bindsym $mod+r mode "resize"
 #
 # Screen capture
 #
-# Screenshot an area
-bindsym --release Print exec \
-    mkdir -p ~/Screenshots && \
-    grim -g "$(slurp)" - | wl-copy -t image/png && \
-    wl-paste > ~/Screenshots/screenshot_$(date +'%Y%m%d_%H%M%S.png')
-# Screenshot of focused window (excluding borders). Requires jq json parser.
-bindsym --release Shift+Print exec \
-    mkdir -p ~/Screenshots && \
-    SNIP_DIMENSIONS=$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"') && \
-    grim -g "$SNIP_DIMENSIONS" - | \
-    wl-copy -t image/png && \
-    wl-paste > ~/Screenshots/screenshot_$(date +'%Y%m%d_%H%M%S.png')
+bindsym --release Print exec "~/.config/scripts/screenshot.sh select"
+bindsym --release Shift+Print exec "~/.config/scripts/screenshot.sh window"
 
 #
 # Audio
