@@ -1,0 +1,69 @@
+/**
+ * @name Minimal Nord Discord
+ * @description A Dicord theme based on the Nord colorscheme
+ * @author TheAvidDev
+ * @version 1.0
+ *
+ * @source https://raw.githubusercontent.com/TheAvidDev/dotfiles/master/Lightcord_BD/themes/DiscordNord.theme.css
+ * @website https://theavid.dev/
+**/
+
+:root {
+    --background-primary: #2e3440;
+    --channeltextarea-background: #3b4252;
+    --background-secondary: #3b4252;
+    --background-secondary-alt: #2e3440;
+    --background-tertiary: #2e3440;
+    
+    --border-radius: 15px;
+}
+
+.da-video, .da-peopleColumn, .da-tabBody {
+    background-color: var(--background-primary);
+}
+
+.da-wrapper.da-video, .da-sidebar, .da-members, .da-nowPlayingColumn {
+    border-radius: var(--border-radius);
+}
+
+.da-panels {
+    background-color: var(--background-secondary);
+}
+
+/*
+ * Change selected channel name and icons
+ */
+.da-selected > .da-wrapper > .da-content > .da-mainContent > .da-name,
+.da-selected > .da-wrapper > .da-content > .da-children > .da-iconItem > .da-actionIcon {
+    color: var(--background-primary);
+}
+
+.da-selected > .da-wrapper > .da-content {
+    background-color: #88c0d0;
+}
+
+/* Remove margin for typing indicator */
+.da-channelTextArea {
+    margin-bottom: 0;
+}
+
+/* Channel name */
+.da-name {
+    color: #d8dee9;
+}
+
+/* Add a small line at the top of chat */
+.da-chatContent {
+  border-top: 1px solid var(--background-secondary);
+}
+
+#bd-pub-li, /* BetterDiscord public vutton */
+#private-channels-1, /* Nitro button */
+.da-toolbar > .da-iconWrapper:nth-child(1), /* Channel mute button */
+.da-toolbar > .da-iconWrapper:nth-child(3), /* Members list button */
+.da-toolbar > .da-iconWrapper:nth-child(5), /* Inbox button */
+.da-toolbar > .da-anchor, /* Help button */
+.da-typing, /* Removing typing indicator */
+.da-content:before { /* Tiny black line in header */
+    display: none;
+}
