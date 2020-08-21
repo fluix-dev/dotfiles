@@ -12,12 +12,13 @@ set $mon1 DP-2
 set $mon2 HDMI-A-3
 
 ### Output configuration
+output * {
+  bg #222831 solid_color
+}
 output $mon1 {
-  bg ~/.config/sway/wallpapers/mrrobot.jpg fill
   resolution 1920x1080 position 1080,420
 }
 output $mon2 {
-  bg ~/.config/sway/wallpapers/blank_90.jpg fill
   resolution 1920x1080 position 0,0 transform 90
 }
 
@@ -240,17 +241,20 @@ bindsym Menu+2 exec "wal --theme andromeda"
 # Font, borders, and gaps
 #
 font Cozette 9
-gaps inner 15
-default_border pixel 2
+gaps inner 50
+gaps outer -15
+default_border none
+
+exec_always swaymsg border_images.focused /home/main/.config/sway/borders/
 
 #
 # Colours
 #
-client.background n/a #f2227a n/a
-client.focused #f2227a #f2227a #191919 #f2227a #f2227a 
-client.focused_inactive #49caea #49caea #191919 #49caea #49caea
-client.unfocused #49caea #49caea #191919 #49caea #49caea
-client.urgent #f2227a #f2227a #191919 #f2227a #f2227a
+client.background n/a #434c5e n/a
+client.focused #434c5e #434c5e #eceff4 #434c5e #434c5e
+client.focused_inactive #3b4252 #3b4252 #eceff4 #3b4252 #3b4252
+client.unfocused #3b4252 #3b4252 #eceff4 #3b4252 #3b4252
+client.urgent #434c5e #434c5e #eceff4 #434c5e #434c5e
 
 #
 # Auto start
