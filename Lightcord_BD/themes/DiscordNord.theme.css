@@ -59,9 +59,6 @@
 
 #bd-pub-li, /* BetterDiscord public vutton */
 #private-channels-1, /* Nitro button */
-.da-toolbar > .da-iconWrapper:nth-child(1), /* Channel mute button */
-.da-toolbar > .da-iconWrapper:nth-child(3), /* Members list button */
-.da-toolbar > .da-iconWrapper:nth-child(5), /* Inbox button */
 .da-toolbar > .da-anchor, /* Help button */
 .da-typing, /* Removing typing indicator */
 .da-content:before { /* Tiny black line in header */
