@@ -229,7 +229,7 @@ bindsym --release Shift+Print exec "~/.config/scripts/screenshot.sh window"
 #
 bindsym XF86AudioRaiseVolume exec "~/.config/scripts/audio.sh 3%+"
 bindsym XF86AudioLowerVolume exec "~/.config/scripts/audio.sh 3%-"
-bindsym $mod+m exec "amixer set Master toggle"
+bindsym $mod+m exec "amixer set Master toggle && amixer set Capture toggle"
 
 #
 # Changing colorscheme
