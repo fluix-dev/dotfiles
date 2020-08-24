@@ -1,65 +1,53 @@
 * {
-    border: none;
-    border-radius: 0;
+    border: 0;
     font-family: Cozette;
     font-size: 12px;
     min-height: 0;
 }
 
 window#waybar {
-    background: #191919;
+    background: #222831;
     padding: 2px;
-    border: 2px solid #e1e3e4;
-    color: #ffffff;
+    color: #eceff4;
 }
 
-window#waybar.hidden {
-    opacity: 0.0;
+window#waybar:first-child > box {
+    box-shadow: 0 0 5px 0 black;
+    margin: 15px;
+    padding: 7px;
+    border-radius: 20px;
+    background-color: #2e3440;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #e1e3e4;
-    border-bottom: 3px solid transparent;
+    color: #4c566a;
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #d8dee9;
 }
 
 #workspaces button.focused {
-    color: #f2227a;
+    color: #88c0d0;
 }
 
-#workspaces button.urgent {
-    background-color: #f2227a;
-    border-top: 2px solid #e1e3e4;
-    border-bottom: 2px solid #e1e3e4;
-}
-
-#custom-d, #clock, #cpu, #disk, #memory, #network, #pulseaudio {
+#custom-d, #clock, #pulseaudio {
     padding: 0 7px;
     margin: 2px 0px;
 }
 
 #mpd {
-  margin: 0;
+    margin: 0;
 }
 
 #pulseaudio {
-  margin-right: 5px;
+  margin-right: -7px;
 }
 
 #custom-d {
-  color: #506568;
-}
-
-@keyframes blink {
-    to {
-        background-color: #e1e3e4;
-        color: #191919;
-    }
+    color: #4c566a;
 }

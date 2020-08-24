@@ -1,18 +1,18 @@
 {
     // Basic config
-    "layer": "top",
+    "layer": "bottom",
     "position": "bottom",
     "height": 30,
     "output": "DP-2",
-    "margin-top": 0,
-    "margin-bottom": 15,
-    "margin-right": 15,
-    "margin-left": 15,
+    "margin-top": -10,
+    "margin-bottom": 10,
+    "margin-right": 100,
+    "margin-left": 100,
 
     // Modules
-    "modules-left": ["sway/workspaces", "custom/d", "cpu", "memory", "disk"],
-    "modules-center": ["mpd", "custom/d", "clock"],
-    "modules-right": ["network", "custom/d", "pulseaudio"],
+    "modules-left": ["clock"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["pulseaudio", "custom/d", "mpd"],
 
     // Modules configuration
     "custom/d": {
@@ -25,82 +25,49 @@
         "format": "{icon}",
         "format-icons": {
             "1a": "",
-            "1b": "",
             "2a": "",
             "2b": "",
             "3a": "",
             "4a": "",
             "5a": "",
+            "0b": "",
+            "1b": "",
+            "2b": "",
+            "3b": "",
+            "4b": "",
+            "5b": "",
+            "6b": "",
+            "7b": "",
+            "8b": "",
+            "9b": "",
             "urgent": "",
             "default": ""
         }
     },
     "mpd": {
-        "format": "<span color=\"#49caec\"></span> {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) <span color=\"#49caec\">{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}</span>",
-        "format-disconnected": "<span color=\"#f2227a\">Disconnected </span>",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped <span color=\"#f2227a\"></span>",
-        "unknown-tag": "Music",
+        "format": "<span>{stateIcon} </span> ",
+        "format-disconnected": "<span color=\"#bf616a\"> </span> ",
+        "format-stopped": "<span color=\"#bf616a\"> </span> ",
         "tooltip": false,
         "interval": 1,
-        "consume-icons": {
-            "on": " ",
-            "off": ""
-        },
-        "random-icons": {
-            "on": " ",
-            "off": ""
-        },
-        "repeat-icons": {
-            "on": " ",
-            "off": ""
-        },
         "state-icons": {
-            "paused": "",
-            "playing": ""
+            "paused": "<span color=\"#d08770\"></span>",
+            "playing": "<span color=\"#a3be8c\"></span>",
         }
     },
     "clock": {
         "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "<span color=\"#f2227a\"></span> {:%A, %d %B at %H:%M}",
-        "format-alt": "<span color=\"#f2227a\"></span> {:%d/%m/%Y at %H:%M:%S}"
-    },
-    "cpu": {
-        "format": "<span color=\"#49caec\"></span> {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "<span color=\"#49caec\"></span> {}%"
-    },
-    "disk": {
-        "interval": 30,
-        "format": "<span color=\"#49caec\"></span> {free}",
-        "path": "/"
-    },
-    "network": {
-        "interface": "enp8s0",
-        "format": "{ifname}",
-        "format-ethernet": "{ifname} <span color=\"#f2227a\"></span> {ipaddr} <span color=\"#506568\"> | </span> <span color=\"#49caec\">▼</span> {bandwidthDownBits} <span color=\"#49caec\">▲</span> {bandwidthUpBits}",
-        "format-disconnected": "<span color=\"#f2227a\">Disconnected</span>",
-        "tooltip": false,
-        "max-length": 50
+        "format": "<span color=\"#88c0d0\"></span> {:%Y-%m-%d, %H:%M:%S}",
     },
     "pulseaudio": {
-        "format": "{volume}% <span color=\"#49caec\">{icon}</span> {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format": "{volume}% <span color=\"#88c0d0\">{icon}</span>",
         "format-muted": "婢",
-        "format-source": "{volume}% <span color=\"#49caec\"></span>",
-        "format-source-muted": "<span color=\"#f2227a\"></span>",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
             "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "amixer set Master toggle && amixer set Capture toggle",
+        "on-click-left": "pavucontrol",
     }
 }
