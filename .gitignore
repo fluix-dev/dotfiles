@@ -35,3 +35,6 @@ QtProject.conf
 Trolltech.conf
 user-dirs.*
 weechat/weechat.log
+weechat/sec.conf
+weechat/weemoji.json
+weechat/*/
