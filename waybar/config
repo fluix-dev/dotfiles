@@ -68,6 +68,6 @@
             "default": ["", ""]
         },
         "on-click": "amixer set Master toggle && amixer set Capture toggle",
-        "on-click-left": "pavucontrol",
+        "on-click-right": "pavucontrol",
     }
 }
