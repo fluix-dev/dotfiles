@@ -17,6 +17,7 @@ This repository contains configuration files for many programs that I regularly 
  - [`neofetch`](https://github.com/dylanaraps/neofetch) is a very popular command line information tool.
  - [`nvim`](https://neovim.io/) is a fork of vim that has been rewritten for usability and extensibility.
  - [`sway`](https://swaywm.org) is a tiling Wayland compositor which serves as a drop-in replacement of i3. Use with [#5639](https://github.com/swaywm/sway/pull/5639).
+ - [`wal`](https://github.com/dylanaraps/pywal) is a color scheme generator and manager.
  - [`waybar`](https://github.com/Alexays/Waybar) is a highly customizable Wayland bar for Sway and Wlroots based compositors.
  - [`wofi`](https://hg.sr.ht/~scoopta/wofi) a Wayland version of the popular Rofi launcher/menu.
  - [`zsh`](https://www.zsh.org/) is an interactive shell with a powerful scripting language.
@@ -28,6 +29,11 @@ The simplest method is to clone the repo and pick and choose what you want, movi
 
 Then, you will have to modify the [Sway](https://github.com/TheAvidDev/dotfiles/blob/master/sway/config) and [Waybar](https://github.com/TheAvidDev/dotfiles/blob/master/waybar/config) output config files to use the appropriate outputs.
 
+Finally, run [pywal](https://github.com/dylanaraps/pywal) to change your colorscheme for terminal applications:
+```sh
+wal --theme nord
+```
+
 ### Distro
 I personally use Arch Linux, but there's nothing specific to these config files that shouldn't work on other distributions. Be aware, however, that installation procedures for the individual packages will certainly be different and that the _locations_ of config files _may_ be different. If you would like to install Arch Linux follow the directions on the [Arch Wiki](https://wiki.archlinux.org/index.php/Installation_guide). I personally used [Anarchy Installer](https://anarchyinstaller.org/) to install Arch and some important packages, but it is neither necessary, nor entirely recommended.
 
@@ -37,15 +43,16 @@ All the applications have been setup to use the [Cozette](https://github.com/sla
 ### Applications
 The official [Arch repos](https://www.archlinux.org/packages/) or the [Arch User Repository (AUR)](https://aur.archlinux.org/) contain all of the applications I use, sometimes under a different name than the folder.
 
-For [Sway](https://swaywm.org) make sure to use [#5639](https://github.com/swaywm/sway/pull/5639) by applying it as a [patch](https://patch-diff.githubusercontent.com/raw/swaywm/sway/pull/5639.patch) and [compiling from source](https://github.com/swaywm/sway#compiling-from-source) for the curved borders with drop shadows. Keep in mind that the config syntax may change and that not all functions work. Refer to the inline `TODO` comments and discussion threads to watch the progress.
+For [Sway](https://swaywm.org), make sure to use [#5639](https://github.com/swaywm/sway/pull/5639) by applying it as a [patch](https://patch-diff.githubusercontent.com/raw/swaywm/sway/pull/5639.patch) and [compiling from source](https://github.com/swaywm/sway#compiling-from-source) for the curved borders with drop shadows. Keep in mind that the config syntax may change and that not all functions work. Refer to the inline `TODO` comments and discussion threads to watch the progress.
 
 ### Scripts
 I have some scripts in `scripts/` that I use which may contain some documentation within them. You may not have a use for them, or you may have to edit them to work on your install.
 
 # Screenshots
-|![Htop, neovim, bonsai.sh, pipes.sh, cava, neofetch, waybar][banner]|
-|---|
-|From top-left to bottom-right: `htop`, `nvim`, `bonsai.sh`, `pipes.sh`, `cava`, `neofetch`, `waybar`|
+|![Htop, neovim, bonsai.sh, pipes.sh, cava, neofetch, waybar][banner]|![Weechat and Discord][comms]|
+|---|---|
+|From top-left to bottom-right: `htop`, `nvim`, `bonsai.sh`, `pipes.sh`, `cava`, `neofetch`, `waybar`|Weechat and Discord (Lightcord)|
 
 <!-- Links -->
 [banner]: https://raw.githubusercontent.com/TheAvidDev/dotfiles/master/img/banner.png
+[comms]: https://raw.githubusercontent.com/TheAvidDev/dotfiles/master/img/comms.png
