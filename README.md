@@ -16,7 +16,7 @@ This repository contains configuration files for many programs that I regularly 
  - [`mpd`](https://www.musicpd.org/) is a flexible, powerful, server-side application for playing music.
  - [`neofetch`](https://github.com/dylanaraps/neofetch) is a very popular command line information tool.
  - [`nvim`](https://neovim.io/) is a fork of vim that has been rewritten for usability and extensibility.
- - [`sway`](https://swaywm.org) is a tiling Wayland compositor which serves as a drop-in replacement of i3.
+ - [`sway`](https://swaywm.org) is a tiling Wayland compositor which serves as a drop-in replacement of i3. Use with [#5639](https://github.com/swaywm/sway/pull/5639).
  - [`waybar`](https://github.com/Alexays/Waybar) is a highly customizable Wayland bar for Sway and Wlroots based compositors.
  - [`wofi`](https://hg.sr.ht/~scoopta/wofi) a Wayland version of the popular Rofi launcher/menu.
  - [`zsh`](https://www.zsh.org/) is an interactive shell with a powerful scripting language.
@@ -35,9 +35,9 @@ I personally use Arch Linux, but there's nothing specific to these config files 
 All the applications have been setup to use the [Cozette](https://github.com/slavfox/Cozette) font, so follow the instructions on its Github for installation.
 
 ### Applications
-The official [Arch repos](https://www.archlinux.org/packages/) or the [Arch User Repository (AUR)](https://aur.archlinux.org/) contains all of the applications I use, sometimes under a different name than the folder.
+The official [Arch repos](https://www.archlinux.org/packages/) or the [Arch User Repository (AUR)](https://aur.archlinux.org/) contain all of the applications I use, sometimes under a different name than the folder.
 
-For [Sway](https://swaywm.org) make sure to use [#5639](https://github.com/swaywm/sway/pull/5639) by applying it as a [patch](https://patch-diff.githubusercontent.com/raw/swaywm/sway/pull/5639.patch) for the curved borders with drop shadows. Keep in mind that the config syntax may change and that not all functions work. Refer to the inline `TODO` comments and discussion threads to see my progress.
+For [Sway](https://swaywm.org) make sure to use [#5639](https://github.com/swaywm/sway/pull/5639) by applying it as a [patch](https://patch-diff.githubusercontent.com/raw/swaywm/sway/pull/5639.patch) and [compiling from source](https://github.com/swaywm/sway#compiling-from-source) for the curved borders with drop shadows. Keep in mind that the config syntax may change and that not all functions work. Refer to the inline `TODO` comments and discussion threads to watch the progress.
 
 ### Scripts
 I have some scripts in `scripts/` that I use which may contain some documentation within them. You may not have a use for them, or you may have to edit them to work on your install.
@@ -45,7 +45,7 @@ I have some scripts in `scripts/` that I use which may contain some documentatio
 # Screenshots
 |![Htop, neovim, bonsai.sh, pipes.sh, cava, neofetch, waybar][banner]|
 |---|
-|From top-left to bottom-right: `htop`, `neovim`, `bonsai.sh`, `pipes.sh`, `cava`, `neofetch`, `waybar`|
+|From top-left to bottom-right: `htop`, `nvim`, `bonsai.sh`, `pipes.sh`, `cava`, `neofetch`, `waybar`|
 
 <!-- Links -->
 [banner]: https://raw.githubusercontent.com/TheAvidDev/dotfiles/master/img/banner.png
