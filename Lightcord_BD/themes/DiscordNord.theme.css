@@ -65,6 +65,25 @@
     display: none;
 }
 
+
+/* Change divider and pill */
+.da-divider {
+    border-color: #bf616a;
+}
+
+.da-divider > span.da-content {
+    color: #bf616a;
+}
+
+.da-unreadPill {
+    background-color: #bf616a;
+}
+
+.da-unreadPillCapStroke {
+    color: #bf616a;
+    fill: #bf616a;
+}
+
 /**
  * Change server folder icon colors
  */
