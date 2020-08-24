@@ -64,3 +64,30 @@
 .da-content:before { /* Tiny black line in header */
     display: none;
 }
+
+/**
+ * Change server folder icon colors
+ */
+#app-mount > .da-app > div > .da-layers > div > div > nav > .da-scroller > div:nth-child(3) > div:nth-child(1) > .da-listItem > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg {
+    color: #bf616a!important;
+}
+
+#app-mount > .da-app > div > .da-layers > div > div > nav > .da-scroller > div:nth-child(3) > div:nth-child(2) > .da-listItem > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg {
+    color: #d08770!important;
+}
+
+#app-mount > .da-app > div > .da-layers > div > div > nav > .da-scroller > div:nth-child(3) > div:nth-child(3) > .da-listItem > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg {
+    color: #ebcb8b!important;
+}
+
+#app-mount > .da-app > div > .da-layers > div > div > nav > .da-scroller > div:nth-child(3) > div:nth-child(4) > .da-listItem > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg {
+    color: #a3be8c!important;
+}
+
+#app-mount > .da-app > div > .da-layers > div > div > nav > .da-scroller > div:nth-child(3) > div:nth-child(5) > .da-listItem > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg {
+    color: #b48ead!important;
+}
+
+#app-mount > .da-app > div > .da-layers > div > div > nav > .da-scroller > div:nth-child(3) > div:nth-child(6) > .da-listItem > div:nth-child(2) > div > svg > foreignObject > div > div > div > svg {
+    color: #88c0d0!important;
+}
