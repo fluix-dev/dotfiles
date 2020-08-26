@@ -232,10 +232,11 @@ bindsym XF86AudioLowerVolume exec "~/.config/scripts/audio.sh 3%-"
 bindsym $mod+m exec "amixer set Master toggle && amixer set Capture toggle"
 
 #
-# Changing colorscheme
+# Opening a layout
 #
 bindsym Menu+1 exec "wal --theme mrrobot"
 bindsym Menu+2 exec "wal --theme andromeda"
+bindsym $mod+o exec "~/.config/scripts/layout.py"
 
 # 
 # Font, borders, and gaps
