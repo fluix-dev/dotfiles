@@ -70,3 +70,6 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias s='source env/bin/activate'
+
+# This file contains commands to run on startup, useful for layout scripts
+source ~/.config/scripts/startup.sh
