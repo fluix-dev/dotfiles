@@ -28,7 +28,7 @@ border-color=#1f62b3
 border-color=#f2227a
 default-timeout=0
 
-[app-name=discord]
+[app-name=lightcord]
 border-color=#49caec
 
 [summary~="log-.*"]
