@@ -234,8 +234,6 @@ bindsym $mod+m exec "amixer set Master toggle && amixer set Capture toggle"
 #
 # Opening a layout
 #
-bindsym Menu+1 exec "wal --theme mrrobot"
-bindsym Menu+2 exec "wal --theme andromeda"
 bindsym $mod+o exec "~/.config/scripts/layout.py"
 
 # 
