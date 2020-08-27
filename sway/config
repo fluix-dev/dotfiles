@@ -236,6 +236,12 @@ bindsym $mod+m exec "amixer set Master toggle && amixer set Capture toggle"
 #
 bindsym $mod+o exec "~/.config/scripts/layout.py"
 
+#
+# Notifications
+#
+bindsym $mod+n exec "makoctl dismiss"
+bindsym $mod+Shift+n exec "makoctl dismiss -a"
+
 # 
 # Font, borders, and gaps
 #
