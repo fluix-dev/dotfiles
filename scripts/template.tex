@@ -1,0 +1,54 @@
+\documentclass[letterpaper]{{dapper-invoice}}
+
+\newcommand{{\invoiceNo}}{{{num}}}
+\newcommand{{\balance}}{{{total}}}
+
+\newcommand{{\me}}{{{me}}}
+\newcommand{{\clientName}}{{{client}}}
+
+\setmetadata{{\me}}{{{business}}}{{\invoiceNo}}{{\clientName}}
+
+\defaultfontfeatures{{ Path = ./Fonts/ }}
+\usepackage{{fontawesome}}
+
+\begin{{document}}
+
+\newfontface\mainLightItalic{{OpenSans-LightItalic}}
+\makeheader{{{business}}}{{\invoiceNo}}
+
+\twocolumnlayout{{
+    \begin{{infoSection}}
+        \infoBox{{Client}}{{\clientName \\
+                         {client_address}}}
+        \infoBox{{Project}}{{{project}}}
+        \infoBox{{Contact}}{{{client_name}}}
+        \infoSub{{\faMobilePhone}}{{\small\slshape {client_phone}}}
+        \infoSub{{\tiny\faEnvelope}}{{\small\slshape \emaillink{{{client_email}}}}}
+        \noalign{{\addvspace{{8ex}}}}
+        \infoBox{{}}{{
+            {{\large\raisebox{{.55\height}}\currencysym\huge\formatcurrency{{\balance}} \arrowbase}} \\
+            {{\small\color{{subduedColor}} due upon receipt}}
+        }}
+    \end{{infoSection}}
+}}{{
+    \begin{{infoSection}}
+        \infoBox{{\arrowtarget Payable To}}{{
+            \me \\
+            {address}
+        }}
+        \infoSub{{\faMobilePhone}}{{\small\slshape {phone}}}
+        \infoSub{{\tiny\faEnvelope}}{{\small\slshape \emaillink{{{email}}}}}
+    \end{{infoSection}}
+}}
+
+\drawarrow
+
+\addvspace{{4ex}}
+
+\begin{{basicItemization}}
+    {items}
+    \beginsummary
+    \summaryline{{Total}}{{{total}}}
+\end{{basicItemization}}
+
+\end{{document}}
