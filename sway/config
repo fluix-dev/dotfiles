@@ -219,21 +219,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #
-# Screen capture
+# Scripts
 #
 bindsym --release Print exec "~/.config/scripts/screenshot.sh select"
 bindsym --release Shift+Print exec "~/.config/scripts/screenshot.sh window"
 
-#
-# Audio
-#
 bindsym XF86AudioRaiseVolume exec "~/.config/scripts/audio.sh 3%+"
 bindsym XF86AudioLowerVolume exec "~/.config/scripts/audio.sh 3%-"
 bindsym $mod+m exec "amixer set Master toggle && amixer set Capture toggle"
 
-#
-# Opening a layout
-#
+bindsym $mod+Shift+d exec "~/.config/scripts/env/bin/python3 ~/.config/scripts/focus_window.py"
 bindsym $mod+o exec "~/.config/scripts/layout.py"
 
 #

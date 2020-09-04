@@ -1,0 +1,3 @@
+i3ipc==2.2.1
+python-xlib==0.27
+six==1.15.0

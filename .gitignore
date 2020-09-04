@@ -33,6 +33,7 @@ nvim/.netrwhist
 pavucontrol.ini
 QtProject.conf
 scripts/startup.sh
+scripts/env/
 Trolltech.conf
 user-dirs.*
 weechat/weechat.log
