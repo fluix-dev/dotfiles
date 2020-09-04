@@ -21,22 +21,12 @@ unity3d/
 vlc/
 wireshark/
 
-aerc/accounts.conf
-hub
 jd-gui.cfg
 kritadisplayrc
 kritarc
-Lightcord_BD/bdstorage.json
 mimeapps.list
 monitors.xml
-nvim/.netrwhist
 pavucontrol.ini
 QtProject.conf
-scripts/startup.sh
-scripts/env/
 Trolltech.conf
 user-dirs.*
-weechat/weechat.log
-weechat/sec.conf
-weechat/weemoji.json
-weechat/*/
