@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background: #222831;
+    background: transparent;
     padding: 2px;
     color: #eceff4;
 }
