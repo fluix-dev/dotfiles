@@ -1,0 +1,9 @@
+[look]
+true_chr = "·"
+false_chr = "·"
+future_chr = "·"
+
+[colors]
+reached = "cyan"
+todo = "magenta"
+inactive = "light black"
