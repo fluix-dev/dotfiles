@@ -32,6 +32,7 @@ set shiftwidth=0
 set expandtab
 
 autocmd FileType c setlocal noexpandtab tabstop=4
+autocmd FileType go setlocal noexpandtab tabstop=4
 
 " UltiSnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
