@@ -240,10 +240,10 @@ gaps inner 50
 gaps outer -15
 default_border none
 
-border_images.focused /home/main/.config/sway/borders/all.png
-border_images.focused_inactive /home/main/.config/sway/borders/all.png
-border_images.unfocused /home/main/.config/sway/borders/all.png
-border_images.urgent /home/main/.config/sway/borders/all.png
+border_images.focused ~/.config/sway/borders/all.png
+border_images.focused_inactive ~/.config/sway/borders/all.png
+border_images.unfocused ~/.config/sway/borders/all.png
+border_images.urgent ~/.config/sway/borders/all.png
 
 #
 # Colours
