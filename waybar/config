@@ -61,13 +61,16 @@
         "format": "<span color=\"#88c0d0\"></span> {:%Y-%m-%d, %H:%M:%S}",
     },
     "pulseaudio": {
-        "format": "{volume}% <span color=\"#88c0d0\">{icon}</span>",
-        "format-muted": "婢",
+        "format": "{volume}% <span color=\"#88c0d0\">{icon} </span>{format_source}",
+        "format-muted": "<span color=\"#d08770\">婢 </span>{format_source}",
+        "format-source": "<span color=\"#88c0d0\"> </span>",
+        "format-source-muted": "<span color=\"#d08770\"> </span>",
         "format-icons": {
             "headset": "",
             "default": ["", ""]
         },
         "on-click": "amixer set Master toggle && amixer set Capture toggle",
-        "on-click-right": "pavucontrol",
+        "on-click-right": "amixer set Capture toggle",
+        "on-click-middle": "pavucontrol",
     }
 }
