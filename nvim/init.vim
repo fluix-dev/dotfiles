@@ -15,6 +15,7 @@ Plug 'honza/vim-snippets'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'sheerun/vim-polyglot'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " Syntax highlighting
@@ -35,8 +36,8 @@ autocmd FileType c setlocal noexpandtab tabstop=4
 autocmd FileType go setlocal noexpandtab tabstop=4
 
 " UltiSnips settings
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsExpandTrigger = '<C-Space>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 let g:python3_host_prog = '/sbin/python'
