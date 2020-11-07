@@ -71,6 +71,6 @@
         },
         "on-click": "amixer set Master toggle && amixer set Capture toggle",
         "on-click-right": "amixer set Capture toggle",
-        "on-click-middle": "pavucontrol",
+        "on-click-middle": "alacritty --class floating -e pulsemixer",
     }
 }
