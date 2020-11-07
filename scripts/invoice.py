@@ -10,7 +10,7 @@ from datetime import datetime
 MAKE_DIR = os.path.expanduser("~/Projects/dapper-invoice/")
 
 # Directory to output invoices
-INVOICE_DIR = os.path.expanduser("~/Documents/invoices/%d/" % datetime.now().year)
+INVOICE_DIR = os.path.expanduser("~/Documents/finances/%d/invoices/" % datetime.now().year)
 
 # Create directories upon a new year
 if not os.path.exists(INVOICE_DIR):
@@ -20,7 +20,7 @@ if not os.path.exists(INVOICE_DIR):
 TEMPLATE_FILE = os.path.expanduser("~/.config/scripts/template.tex")
 
 # Contains a list of JSON files that overwrite VARS
-PROJECTS = glob.glob(os.path.expanduser("~/Documents/invoices/") + "*.json")
+PROJECTS = glob.glob(os.path.expanduser("~/Documents/finances/") + "*.json")
 
 # Variables required for the template
 VARS = {
