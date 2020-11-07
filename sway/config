@@ -29,6 +29,10 @@ input "type:pointer" {
   scroll_factor 2
 }
 
+input "type:tablet_tool" {
+  map_to_output $mon1
+}
+
 ### Key bindings
 #
 # Basics:
