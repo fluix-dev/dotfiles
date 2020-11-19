@@ -13,7 +13,7 @@ set $mon2 HDMI-A-3
 
 ### Output configuration
 output * {
-  bg #222831 solid_color
+  bg ~/.config/sway/wallpapers/crystal.png fill
 }
 output $mon1 {
   resolution 1920x1080 position 1080,420
@@ -240,14 +240,14 @@ bindsym $mod+Shift+n exec "makoctl dismiss -a"
 # Font, borders, and gaps
 #
 font Cozette 9
-gaps inner 50
-gaps outer -15
+gaps inner 28
+gaps outer -8
 default_border none
 
-border_images.focused ~/.config/sway/borders/all.png
-border_images.focused_inactive ~/.config/sway/borders/all.png
-border_images.unfocused ~/.config/sway/borders/all.png
-border_images.urgent ~/.config/sway/borders/all.png
+border_images.focused ~/.config/sway/borders/focused.png
+border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
+border_images.unfocused ~/.config/sway/borders/unfocused.png
+border_images.urgent ~/.config/sway/borders/urgent.png
 
 #
 # Colours

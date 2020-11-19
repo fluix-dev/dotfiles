@@ -7,16 +7,16 @@
 
 window#waybar {
     background: transparent;
-    padding: 2px;
     color: #eceff4;
 }
 
 window#waybar:first-child > box {
-    box-shadow: 0 0 5px 0 black;
-    margin: 15px;
-    padding: 7px;
-    border-radius: 20px;
+    margin-top: 11px;
+    padding: 8px 4px 4px 4px;
+    border-radius: 20px 20px 0px 0px;
     background-color: #2e3440;
+    border: 2px solid #88c0d0;
+    border-bottom: 0;
 }
 
 #workspaces button {
